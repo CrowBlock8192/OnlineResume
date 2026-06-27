@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张蕾 - 个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .course-list {
+            margin-top: 10px;
+        }
+
+        .course-item {
+            margin-bottom: 12px;
+        }
+
+        .course-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .course-desc {
+            color: #7f8c8d;
+            margin-left: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-category-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .skill-item {
+            background: #ecf0f1;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .trait-item {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .trait-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .trait-item strong {
+            color: #2c3e50;
+        }
+
+        .footer {
+            text-align: center;
+            color: #95a5a6;
+            font-size: 12px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume {
+                box-shadow: none;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1>张蕾</h1>
+            <p class="subtitle">计算机科学与技术 | 大一</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📋 个人信息</h2>
+            <ul class="info-list">
+                <li><strong>姓名：</strong>张蕾</li>
+                <li><strong>学校：</strong>岳阳学院</li>
+                <li><strong>年级：</strong>大一</li>
+                <li><strong>专业：</strong>计算机科学与技术</li>
+                <li><strong>联系方式：</strong>待补充</li>
+                <li><strong>邮箱：</strong>待补充</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎓 教育背景</h2>
+            <div class="education-item">
+                <strong>岳阳学院</strong> | 计算机科学与技术 | 2025年9月 - 至今
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📚 主修课程</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <span class="course-name">C语言程序设计</span>
+                    <span class="course-desc">：掌握C语言基础语法、指针、数组、函数等核心概念</span>
+                </div>
+                <div class="course-item">
+                    <span class="course-name">数据结构与算法</span>
+                    <span class="course-desc">：学习线性表、栈、队列、树、图等基础数据结构及常用算法</span>
+                </div>
+                <div class="course-item">
+                    <span class="course-name">人工智能基础</span>
+                    <span class="course-desc">：了解人工智能基本概念、机器学习入门知识</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🔧 技能专长</h2>
+            <div class="skill-category">
+                <div class="skill-category-title">编程语言</div>
+                <span class="skill-item">C语言（熟练掌握基础语法和编程思想）</span>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">开发工具</div>
+                <span class="skill-item">Git（版本控制）</span>
+                <span class="skill-item">VS Code（代码编辑与开发）</span>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">领域知识</div>
+                <span class="skill-item">数据结构与算法基础</span>
+                <span class="skill-item">人工智能入门知识</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💡 自我评价</h2>
+            <div class="trait-item">
+                <strong>动手能力强：</strong>热衷于通过实践项目巩固理论知识，喜欢动手编写代码验证学习成果
+            </div>
+            <div class="trait-item">
+                <strong>主动学习者：</strong>对人工智能领域有浓厚兴趣，积极关注行业前沿动态，能够快速掌握新技术和新概念
+            </div>
+            <div class="trait-item">
+                <strong>实践导向：</strong>不仅满足于理论理解，更注重将知识应用到实际编程中，善于通过调试和优化提升代码质量
+            </div>
+            <div class="trait-item">
+                <strong>持续进步：</strong>具备良好的自我驱动力，对新鲜事物接受能力强，始终保持学习热情
+            </div>
+        </div>
+
+        <div class="footer">
+            简历更新日期：2026年6月27日
+        </div>
+    </div>
+</body>
+</html>
