@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长沙→宜春明月山 自驾旅行攻略</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f0f4f0;
+            color: #2d3e2d;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 20px 20px;
+            background: linear-gradient(135deg, #1a3a1a, #2d5e2d);
+            border-radius: 18px 18px 0 0;
+            color: #fff;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .header .sub {
+            font-size: 15px;
+            opacity: 0.85;
+            margin-top: 8px;
+            font-weight: 300;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-top: 12px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0;
+            background: #e2ebe2;
+            border-radius: 0 0 18px 18px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .tabs button {
+            flex: 1;
+            padding: 16px 10px;
+            border: none;
+            background: transparent;
+            font-size: 17px;
+            font-weight: 600;
+            color: #3d5a3d;
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 1px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tabs button:hover {
+            background: rgba(45, 94, 45, 0.06);
+        }
+
+        .tabs button.active {
+            background: #fff;
+            color: #1a3a1a;
+            border-bottom-color: #2d5e2d;
+        }
+
+        /* Content */
+        .tab-content {
+            display: none;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cards */
+        .info-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border-left: 5px solid #3a7a3a;
+        }
+
+        .info-card .label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #5a7a5a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            color: #1a3a1a;
+            margin-bottom: 12px;
+        }
+
+        .info-card p, .info-card li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #3d4f3d;
+        }
+
+        .info-card ul {
+            padding-left: 22px;
+            margin: 6px 0;
+        }
+
+        .info-card ul li {
+            margin-bottom: 4px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+            margin: 8px 0 4px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 6px;
+            bottom: 6px;
+            width: 2.5px;
+            background: #c0d6c0;
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 10px 0 10px 20px;
+            border-bottom: 1px dashed #e8f0e8;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 16px;
+            width: 12px;
+            height: 12px;
+            background: #3a7a3a;
+            border-radius: 50%;
+            border: 3px solid #d4e8d4;
+        }
+
+        .timeline-item .time {
+            font-weight: 700;
+            color: #1a4a1a;
+            font-size: 15px;
+            display: inline-block;
+            min-width: 70px;
+        }
+
+        .timeline-item .desc {
+            font-size: 15px;
+            color: #3d4f3d;
+            line-height: 1.6;
+        }
+
+        .timeline-item .highlight {
+            background: #eaf4ea;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #2d5e2d;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        /* Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .tips-grid .tip {
+            background: #f6faf6;
+            border-radius: 12px;
+            padding: 16px 18px;
+            font-size: 14px;
+            border: 1px solid #e0ece0;
+        }
+
+        .tips-grid .tip strong {
+            color: #1a4a1a;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 640px) {
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .info-card {
+                padding: 18px 16px;
+            }
+
+            .tabs button {
+                font-size: 14px;
+                padding: 12px 6px;
+            }
+
+            .timeline-item .time {
+                display: block;
+                min-width: unset;
+                margin-bottom: 2px;
+            }
+
+            .timeline-item {
+                padding-left: 10px;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px 20px 10px;
+            font-size: 13px;
+            color: #7a967a;
+            border-top: 1px solid #dce8dc;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #2d5e2d;
+            text-decoration: none;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a3a1a;
+            margin: 30px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #d4e8d4;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🚗 长沙 → 宜春明月山</h1>
+        <div class="sub">自驾旅行攻略 · 全程约202公里 · 车程约3小时</div>
+        <div class="badge">🕕 6:30 长沙出发</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="active" data-tab="day1">🗓️ 一日行程</button>
+        <button data-tab="day2">🗓️ 两日行程</button>
+    </div>
+
+    <!-- ==================== 一日行程 ==================== -->
+    <div id="day1" class="tab-content active">
+
+        <div class="info-card">
+            <div class="label">📌 行程概览</div>
+            <h3>明月山一日精华游</h3>
+            <p><strong>总时长：</strong>约 15 小时（6:30 出发 → 21:30 左右返抵长沙）<br>
+            <strong>推荐路线：</strong>缆车上山 → 青云栈道 → 月亮湖 → 徒步下山观瀑布群</p>
+        </div>
+
+        <div class="info-card">
+            <div class="label">⏰ 详细时间线</div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="time">06:30</span>
+                    <span class="desc"><strong>长沙出发</strong> — 从长沙市区出发，导航至“明月山景区游客中心”。沿岳麓大道→三一大道→长永高速→长株高速→醴潭高速→昌金高速前往宜春。[reference:0][reference:1]</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">09:30</span>
+                    <span class="desc"><strong>抵达明月山景区</strong> — 全程约202公里，车程约3小时[reference:2]。车辆停放在景区停车场（停车费约10元/天）[reference:4][reference:5]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">09:45</span>
+                    <span class="desc"><strong>购票 &amp; 乘观光车</strong> — 景区门票95元/人[reference:6][reference:7]。乘坐山下观光车（单程10元/人）至缆车下站[reference:8][reference:9]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">10:00</span>
+                    <span class="desc"><strong>乘坐缆车上山</strong> — 缆车上行80元/人，约15-20分钟直达山顶[reference:10][reference:11]。缆车运营时间：夏季8:00-17:30[reference:12]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">10:20</span>
+                    <span class="desc"><strong>山顶观光车 → 月亮湖</strong> — 出缆车站后换乘山顶观光车（单程15元/人）至月亮湖游客中心[reference:13][reference:14]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">10:35</span>
+                    <span class="desc"><strong>星月洞 → 青云栈道</strong> — 穿过天然溶洞星月洞，踏上全长3100米的青云栈道。栈道悬于海拔1500多米的悬崖峭壁之上，视野壮阔[reference:15]。游览约1.5小时。</span>
+                    <span class="highlight">🌟 明月山王牌地标</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">12:10</span>
+                    <span class="desc"><strong>月亮湖游览 &amp; 午餐</strong> — 海拔1530米的高山湖泊，湖水澄澈，四周青山环抱[reference:18]。可在月亮湖服务区用简餐或自带零食补充能量[reference:19]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">13:00</span>
+                    <span class="desc"><strong>徒步下山 · 观五叠瀑布</strong> — 从缆车上站附近沿瀑布景观道下山，依次经过云谷飞瀑（落差119米，“江南第一高瀑”）、玲珑瀑、鱼鳞瀑、玉龙瀑、飞练瀑[reference:20][reference:21]。全程约2.5-3小时[reference:22]。</span>
+                    <span class="highlight">💦 丰水期极为壮观</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">16:00</span>
+                    <span class="desc"><strong>抵达山脚，返程</strong> — 结束景区游览，返回停车场取车。注意缆车停运时间为16:30-17:00，务必在此之前下山[reference:23][reference:24]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">19:00</span>
+                    <span class="desc"><strong>返回长沙</strong> — 车程约3小时，抵达长沙市区[reference:25]。</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="label">💡 一日游贴士</div>
+            <div class="tips-grid">
+                <div class="tip"><strong>🎫 费用参考</strong>门票95元 + 缆车上行80元 + 山下观光车10元 + 山顶观光车15元 = 约200元/人（不含餐饮）[reference:26][reference:27]</div>
+                <div class="tip"><strong>🧥 穿搭建议</strong>山顶比山下低5-8℃，即使夏季也建议带薄外套；穿防滑运动鞋[reference:28][reference:29]</div>
+                <div class="tip"><strong>🍱 餐饮</strong>山顶月亮湖有简餐，也可自备干粮和水[reference:30]。山下温汤镇有富硒豆腐宴、宜春炒粉等美食[reference:32]</div>
+                <div class="tip"><strong>⚠️ 重要提醒</strong>缆车16:30-17:00停运，务必在此之前下山[reference:33]。雨后天晴最容易看到云海[reference:34]</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==================== 两日行程 ==================== -->
+    <div id="day2" class="tab-content">
+
+        <div class="info-card">
+            <div class="label">📌 行程概览</div>
+            <h3>明月山 + 温汤古镇 两日漫游</h3>
+            <p><strong>Day 1：</strong>长沙出发 → 明月山景区 → 温汤镇住宿泡温泉<br>
+            <strong>Day 2：</strong>温汤镇漫步 → 可选二次入园或周边游玩 → 返程</p>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="section-title">第一天</div>
+
+        <div class="info-card">
+            <div class="label">⏰ Day 1 详细时间线</div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="time">06:30</span>
+                    <span class="desc"><strong>长沙出发</strong> — 导航至“明月山景区游客中心”，全程约202公里[reference:35]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">09:30</span>
+                    <span class="desc"><strong>抵达明月山景区</strong> — 停车（10元/天），购票入园[reference:36]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">09:45</span>
+                    <span class="desc"><strong>乘观光车 → 缆车上山</strong> — 山下观光车10元 → 缆车上行80元，约15-20分钟到山顶[reference:37][reference:38]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">10:10</span>
+                    <span class="desc"><strong>青云栈道 + 星月洞</strong> — 全长3100米悬空栈道，游览约1.5小时[reference:39]。</span>
+                    <span class="highlight">🌟 必打卡</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">11:40</span>
+                    <span class="desc"><strong>月亮湖游览</strong> — 高山湖泊，拍照休憩。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">12:30</span>
+                    <span class="desc"><strong>午餐（山顶或下山后）</strong> — 可在月亮湖服务区简餐，或乘缆车下山后在温汤镇用餐[reference:42]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">13:30</span>
+                    <span class="desc"><strong>选择一：缆车下山</strong>（缆车下行70元）前往温汤镇[reference:43]<br>
+                    <strong>选择二：徒步下山观瀑布</strong>（约2.5-3小时），沿途欣赏五叠瀑布群[reference:44]</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">16:30</span>
+                    <span class="desc"><strong>前往温汤镇 · 办理入住</strong> — 温汤镇位于明月山脚下，以富硒温泉闻名[reference:45]。推荐住宿：宜春明月山假日度假酒店、温汤雨后温泉民宿、栖心谷民宿等[reference:46]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">18:00</span>
+                    <span class="desc"><strong>晚餐 &amp; 泡温泉</strong> — 品尝温汤发糕、富硒豆腐宴等地道美食。晚餐后体验富硒温泉（温泉常年68-72℃）[reference:49]，舒缓登山疲劳。</span>
+                    <span class="highlight">♨️ 温汤镇核心体验</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="section-title">第二天</div>
+
+        <div class="info-card">
+            <div class="label">⏰ Day 2 详细时间线</div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="time">08:00</span>
+                    <span class="desc"><strong>早餐 &amp; 古镇漫步</strong> — 清晨的温汤镇宁静惬意，可逛逛古街，感受“中国温泉之乡”的慢生活[reference:50]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">09:00</span>
+                    <span class="desc"><strong>可选活动（二选一）</strong><br>
+                    <strong>A.</strong> 二次入园明月山（门票当日有效，次日需重新购票），补看前日未游览的景点；<br>
+                    <strong>B.</strong> 前往二十四桥明月园，欣赏田园风光和清代古建；或体验温汤镇的富硒温泉泡脚、头疗等[reference:52]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">12:00</span>
+                    <span class="desc"><strong>午餐</strong> — 温汤镇或宜春市区用餐，推荐慈化鸡、温汤豆腐等[reference:53]。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">13:30</span>
+                    <span class="desc"><strong>收拾行李，返程</strong> — 导航返回长沙，车程约3小时。</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">16:30</span>
+                    <span class="desc"><strong>抵达长沙</strong> — 结束两天一夜的明月山之旅。</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="label">💡 两日游贴士</div>
+            <div class="tips-grid">
+                <div class="tip"><strong>🏨 住宿推荐</strong>温汤镇：宜春明月山假日度假酒店（位置优越）[reference:55]、温汤雨后温泉民宿（日式园林）、栖心谷民宿（近游客中心）[reference:57]</div>
+                <div class="tip"><strong>♨️ 温泉体验</strong>富硒温泉可饮可浴，常年68-72℃[reference:58]。建议傍晚泡汤，人少景美[reference:59]</div>
+                <div class="tip"><strong>🍜 美食推荐</strong>温汤发糕、富硒豆腐宴、宜春炒粉[reference:62]、慈化鸡[reference:63]</div>
+                <div class="tip"><strong>📅 最佳季节</strong>春季杜鹃花开，夏季避暑，秋季天高云淡，冬季赏雪泡温泉[reference:64]</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        📍 明月山景区地址：江西省宜春市袁州区温汤镇潭下村[reference:65]<br>
+        开放时间：夏季 7:30-16:30 | 冬季 8:00-16:00[reference:66]<br>
+        攻略信息仅供参考，实际行程请以当日天气及景区公告为准
+    </div>
+
+</div>
+
+<script>
+    (function() {
+        const tabs = document.querySelectorAll('.tabs button');
+        const contents = {
+            day1: document.getElementById('day1'),
+            day2: document.getElementById('day2')
+        };
+
+        tabs.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabId = this.dataset.tab;
+
+                // 切换按钮状态
+                tabs.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // 切换内容
+                Object.keys(contents).forEach(key => {
+                    contents[key].classList.toggle('active', key === tabId);
+                });
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>
